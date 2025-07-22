@@ -3,6 +3,7 @@ package cache
 import (
 	"fmt"
 	"sync"
+	"os"
 
 	"github.com/coocood/freecache"
 )
@@ -70,4 +71,12 @@ func NewDB() CacheManager {
 	cm := new(cacheDB)
 	cm.mem = make(map[int64]*freecache.Cache)
 	return cm
+}
+
+func f(x int) {
+	return
+}
+
+func g() {
+	os.Exit(1)
 }
